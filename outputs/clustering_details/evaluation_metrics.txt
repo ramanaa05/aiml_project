@@ -1,0 +1,187 @@
+--- Model Evaluation ---
+K-Means Final Metrics (K=2):
+  Inertia (WCSS): 2407273.54
+  Silhouette Score: 0.1463
+
+Final clustered data saved to: clustered_users_final.csv
+
+--- Cluster Interpretation (Centroids) ---
+                     age  sincere_important  funny_important  \
+Cluster_Label                                                  
+0              26.359113          17.369061        17.455088   
+1              25.000000          30.000000        20.000000   
+
+               ambtition_important  shared_interests_important   sincere  \
+Cluster_Label                                                              
+0                        10.677547                   11.847995   8.28729   
+1                        10.000000                    5.000000  10.00000   
+
+                   funny   ambition     sports   tvsports  ...  \
+Cluster_Label                                              ...   
+0               8.395444   7.576499   6.420144   4.556835  ...   
+1              10.000000  10.000000  10.000000  10.000000  ...   
+
+               field_physics [astrophysics]  field_political science  \
+Cluster_Label                                                          
+0                                  0.001918                 0.004317   
+1                                  0.000000                 0.000000   
+
+               field_psychology  field_psychology and english  \
+Cluster_Label                                                   
+0                      0.004556                      0.001199   
+1                      0.000000                      0.000000   
+
+               field_social work  field_sociology  field_speech pathology  \
+Cluster_Label                                                               
+0                       0.003118         0.006235                0.001679   
+1                       0.000000         0.000000                0.000000   
+
+               field_teaching of English  field_theory  field_working  
+Cluster_Label                                                          
+0                               0.001799        0.0006       0.001799  
+1                               0.000000        0.0000       0.000000  
+
+[2 rows x 289 columns]
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+--- Model Evaluation ---
+K-Means Final Metrics (K=5):
+  Inertia (WCSS): 2372549.83
+  Silhouette Score: -0.0821
+Cluster Sizes:
+Social_Group_Label
+0    8242
+1      22
+2      57
+3      19
+4      22
+Name: count, dtype: int64
+--- 3. Final Model Training & Evaluation Complete ---
+--- 4. Cluster Visualization Started ---
+--- 4. Cluster Visualization Complete (New Plot Saved) ---
+
+Final clustered data saved to: social_clustered_users_k5_final.csv
+
+--- Cluster Interpretation (Centroids) ---
+                          age  sincere_important  funny_important  \
+Social_Group_Label                                                  
+0                   26.354404          17.349305        17.462683   
+1                   25.000000          30.000000        20.000000   
+2                   27.736842          20.263158        14.526316   
+3                   27.000000          20.000000        20.000000   
+4                   24.000000          15.000000        20.000000   
+
+                    ambtition_important  shared_interests_important  \
+Social_Group_Label                                                    
+0                             10.632339                   11.871788   
+1                             10.000000                    5.000000   
+2                             14.105263                    9.736842   
+3                             15.000000                   10.000000   
+4                             15.000000                   10.000000   
+
+                      sincere      funny   ambition     sports   tvsports  \
+Social_Group_Label                                                          
+0                    8.285974   8.413128   7.579107   6.409488   4.568551   
+1                   10.000000  10.000000  10.000000  10.000000  10.000000   
+2                    8.736842   7.947368   7.947368   7.263158   2.263158   
+3                    9.000000   6.000000   6.000000   9.000000   7.000000   
+4                    7.000000   5.000000   7.000000   6.000000   4.000000   
+
+                    ...  field_physics [astrophysics]  \
+Social_Group_Label  ...                                 
+0                   ...                      0.001941   
+1                   ...                      0.000000   
+2                   ...                      0.000000   
+3                   ...                      0.000000   
+4                   ...                      0.000000   
+
+                    field_political science  field_psychology  \
+Social_Group_Label                                              
+0                                  0.004368          0.004611   
+1                                  0.000000          0.000000   
+2                                  0.000000          0.000000   
+3                                  0.000000          0.000000   
+4                                  0.000000          0.000000   
+
+                    field_psychology and english  field_social work  \
+Social_Group_Label                                                    
+0                                       0.001213           0.003155   
+1                                       0.000000           0.000000   
+2                                       0.000000           0.000000   
+3                                       0.000000           0.000000   
+4                                       0.000000           0.000000   
+
+                    field_sociology  field_speech pathology  \
+Social_Group_Label                                            
+0                          0.006309                0.001699   
+1                          0.000000                0.000000   
+2                          0.000000                0.000000   
+3                          0.000000                0.000000   
+4                          0.000000                0.000000   
+
+                    field_teaching of English  field_theory  field_working  
+Social_Group_Label                                                          
+0                                     0.00182      0.000607        0.00182  
+1                                     0.00000      0.000000        0.00000  
+2                                     0.00000      0.000000        0.00000  
+3                                     0.00000      0.000000        0.00000  
+4                                     0.00000      0.000000        0.00000  
+
+[5 rows x 288 columns]
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+--- 1. Data Preprocessing Started ---
+Features used for clustering: 288
+--- 1. Data Preprocessing Complete ---
+
+--- Searching for Optimal K (2 to 10) ---
+K=2: FPC=0.5000, PE=4.0000
+K=3: FPC=0.3333, PE=4.0000
+K=4: FPC=0.2500, PE=4.0000
+K=5: FPC=0.2000, PE=4.0000
+K=6: FPC=0.1667, PE=4.0000
+K=7: FPC=0.1429, PE=4.0000
+K=8: FPC=0.1250, PE=4.0000
+K=9: FPC=0.1111, PE=4.0000
+K=10: FPC=0.1000, PE=4.0000
+
+Optimal K (Max FPC): 2
+Optimal K (Min PE): 2
+Chosen K for Final Model: 2
+--- 2. Fuzzy C-Means Training Started (K=2, m=2.0) ---
+Final Fuzzy Partition Coefficient (FPC): 0.5000
+--- 2. Fuzzy C-Means Training Complete ---
+
+--- Model Evaluation ---
+Hard-Assigned Silhouette Score: 0.0159
+Cluster Sizes (Based on Hard Assignment):
+Hard_Label
+0    4424
+1    3938
+Name: count, dtype: int64
+
+Final fuzzy data (with membership scores) saved to: social_clustered_users_fuzzy.csv
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Final Fuzzy Partition Coefficient (FPC): 0.2000
+--- 2. Fuzzy C-Means Training Complete ---
+
+--- Model Evaluation ---
+Hard-Assigned Silhouette Score: -0.0247
+Cluster Sizes (Based on Hard Assignment):
+Hard_Label
+0     131
+1    3629
+2     319
+3    4065
+4     218
+Name: count, dtype: int64
+
+Final fuzzy data (with membership scores) saved to: social_clustered_users_fuzzy.csv

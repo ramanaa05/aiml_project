@@ -25,7 +25,7 @@ The project requires the installation of the specialized `scikit-fuzzy` library 
 !pip install scikit-fuzzy
 
 ### 2.2 Dataset Configuration
-
+  * **Original Dataset:** [https://www.kaggle.com/datasets/ulrikthygepedersen/speed-dating]
   * **Source File:** `featureEngineeredBetter.csv`
   * **Setup:** Upload this file to the root directory of your Google Colab or Jupyter environment.
   * **Feature Set:** The features are derived from the Speed Dating Experiment, including Age, Race, Field, and 24 self-rated scores (e.g., Sincerity, Ambition, Sports, Art). The **`gender`** attribute was intentionally **removed** from the features for all clustering models.
